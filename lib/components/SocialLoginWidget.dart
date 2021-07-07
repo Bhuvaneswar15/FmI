@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:mighty_news_firebase/services/AuthService.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/services/AuthService.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/main.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/main.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class HeaderWidget extends StatelessWidget {

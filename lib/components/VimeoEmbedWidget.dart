@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class VimeoEmbedWidget extends StatelessWidget {

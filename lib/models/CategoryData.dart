@@ -1,6 +1,6 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:mighty_news_firebase/utils/ModelKeys.dart';
+import 'package:FmI/utils/ModelKeys.dart';
 
 class CategoryData {
   String? id;

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:html/parser.dart';
 import 'package:intl/intl.dart';
-import 'package:mighty_news_firebase/utils/Colors.dart';
+import 'package:FmI/utils/Colors.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -46,9 +46,9 @@ InputDecoration inputDecoration({String? labelText, String? hintText}) {
 }
 
 Future<void> launchUrl(String url, {bool forceWebView = false}) async {
-  log(url);
+  log("util/Common.dart/url "+url);
   await launch(url, forceWebView: forceWebView, enableJavaScript: true).catchError((e) {
-    log(e);
+    log("util/Common.dart "+e);
     toast('Invalid URL: $url');
   });
 }

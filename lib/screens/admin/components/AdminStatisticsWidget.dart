@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:mighty_news_firebase/main.dart';
-import 'package:mighty_news_firebase/screens/admin/components/MostViewedNewsWidget.dart';
-import 'package:mighty_news_firebase/screens/admin/components/RecentlyLoggedInUserWidget.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/main.dart';
+import 'package:FmI/screens/admin/components/MostViewedNewsWidget.dart';
+import 'package:FmI/screens/admin/components/RecentlyLoggedInUserWidget.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../../main.dart';

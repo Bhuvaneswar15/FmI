@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';
@@ -20,7 +20,7 @@ Map<String, String> buildHeaderTokens() {
   if (appStore.isLoggedIn) {
     //header.putIfAbsent(HttpHeaders.authorizationHeader, () => 'Bearer ${getStringAsync(TOKEN)}');
   }
-  log(jsonEncode(header));
+  log("network/NetworkUtils.dart/isLogin()"+jsonEncode(header));
   return header;
 }
 
@@ -28,7 +28,7 @@ Uri buildBaseUrl(String endPoint) {
   Uri url = Uri.parse(endPoint);
   if (!endPoint.startsWith('http')) url = Uri.parse('$endPoint');
 
-  log('URL: ${url.toString()}');
+  log("network/NetworkUtils.dart/buildBaseUrl"+'URL: ${url.toString()}');
 
   return url;
 }
@@ -41,7 +41,7 @@ Future<Response> buildHttpResponse(String endPoint, {HttpMethod method = HttpMet
     Response response;
 
     if (method == HttpMethod.POST) {
-      log('Request: $request');
+      log("network/NetworkUtils.dart/buildHtttpsResponse"+'Request: $request');
 
       response = await http.post(url, body: jsonEncode(request), headers: headers);
     } else if (method == HttpMethod.DELETE) {
@@ -52,7 +52,7 @@ Future<Response> buildHttpResponse(String endPoint, {HttpMethod method = HttpMet
       response = await get(url, headers: headers);
     }
 
-    log('Response ($method): ${response.statusCode} ${response.body}');
+    log("network/NetworkUtils.dart/buildHtttpsResponse (else case) "'Response ($method): ${response.statusCode} ${response.body}');
 
     return response;
   } else {
@@ -81,7 +81,7 @@ Future handleResponse(Response response, [bool? avoidTokenError]) async {
       var body = jsonDecode(response.body);
       throw parseHtmlString(body['message']);
     } on Exception catch (e) {
-      log(e);
+      log("network/NetworkUtils.dart/handelResponse()/error: {$e}");
       throw errorSomethingWentWrong;
     }
   }

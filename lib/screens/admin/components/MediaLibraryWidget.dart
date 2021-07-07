@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/services/FileStorageService.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/services/FileStorageService.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class MediaLibraryWidget extends StatefulWidget {
@@ -37,11 +37,13 @@ class MediaLibraryWidgetState extends State<MediaLibraryWidget> {
       child: FutureBuilder(
         future: listOfFileFromFirebaseStorage(),
         builder: (_, snap) {
+          log("admin/components/MediaLibraryWidget.dart");
           log(snap.error);
 
           return Offstage(
             offstage: !snap.hasError,
-            child: Text('coming_soon'.translate, style: secondaryTextStyle()).center(),
+            child: Text('coming_soon'.translate, style: secondaryTextStyle())
+                .center(),
           );
         },
       ),

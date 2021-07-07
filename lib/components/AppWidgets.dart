@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/main.dart';
-import 'package:mighty_news_firebase/models/CategoryData.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
-import 'package:mighty_news_firebase/utils/Colors.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/main.dart';
+import 'package:FmI/models/CategoryData.dart';
+import 'package:FmI/models/NewsData.dart';
+import 'package:FmI/utils/Colors.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';

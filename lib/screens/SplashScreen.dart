@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/AppLocalizations.dart';
-import 'package:mighty_news_firebase/screens/user/UserDashboardScreen.dart';
-import 'package:mighty_news_firebase/screens/user/WalkThroughScreen.dart';
-import 'package:mighty_news_firebase/services/AuthService.dart';
-import 'package:mighty_news_firebase/utils/Colors.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/AppLocalizations.dart';
+import 'package:FmI/screens/user/UserDashboardScreen.dart';
+import 'package:FmI/screens/user/WalkThroughScreen.dart';
+import 'package:FmI/services/AuthService.dart';
+import 'package:FmI/utils/Colors.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:package_info/package_info.dart';
 

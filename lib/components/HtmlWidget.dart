@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html/html_parser.dart';
 import 'package:flutter_html/style.dart';
-import 'package:mighty_news_firebase/components/AppWidgets.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/components/AppWidgets.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import 'VimeoEmbedWidget.dart';

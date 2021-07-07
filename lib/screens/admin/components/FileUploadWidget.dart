@@ -1,7 +1,7 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/services/FileStorageService.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/services/FileStorageService.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class FileUploadWidget extends StatefulWidget {
@@ -27,10 +27,11 @@ class FileUploadWidgetState extends State<FileUploadWidget> {
 
     if (result != null) {
       await uploadFile(bytes: result.files.first.bytes).then((value) {
-        log(value);
+
+        log("admin/components/FileUploadWidget.dart"+value);
       }).catchError((e) {
         log(e);
-        toast(e.toString());
+        toast("admin/components/FileUploadWidget.dart"+e.toString());
       });
     }
   }

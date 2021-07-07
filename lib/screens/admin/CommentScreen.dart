@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/components/AppWidgets.dart';
-import 'package:mighty_news_firebase/models/CommentData.dart';
-import 'package:mighty_news_firebase/screens/user/LoginScreen.dart';
-import 'package:mighty_news_firebase/services/CommentService.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/components/AppWidgets.dart';
+import 'package:FmI/models/CommentData.dart';
+import 'package:FmI/screens/user/LoginScreen.dart';
+import 'package:FmI/services/CommentService.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../main.dart';

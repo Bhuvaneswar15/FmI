@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:mighty_news_firebase/models/UserModel.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/models/UserModel.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';
@@ -9,6 +9,7 @@ import 'BaseService.dart';
 class UserService extends BaseService {
   UserService() {
     ref = db.collection('users');
+    log("services/UserService.dart/storageReference()");
     log(db);
   }
 

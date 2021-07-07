@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/utils/Constants.dart';
 
 const colorPrimary = Color(0xFFCC1C2C);
 

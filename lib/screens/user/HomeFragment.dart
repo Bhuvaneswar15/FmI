@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/models/DashboardResponse.dart';
-import 'package:mighty_news_firebase/shimmer/HorizontalImageShimmer.dart';
-import 'package:mighty_news_firebase/shimmer/VerticalTextImageShimmer.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/models/DashboardResponse.dart';
+import 'package:FmI/shimmer/HorizontalImageShimmer.dart';
+import 'package:FmI/shimmer/VerticalTextImageShimmer.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../main.dart';
@@ -51,9 +51,7 @@ class _HomeFragmentState extends State<HomeFragment> {
             children: [
               Container(
                 height: !getBoolAsync(DISABLE_LOCATION_WIDGET) ? 100 : 70,
-                child: !getBoolAsync(DISABLE_LOCATION_WIDGET)
-                    ? WeatherWidget()
-                    : HeaderWidget(),
+                child: !getBoolAsync(DISABLE_LOCATION_WIDGET)? WeatherWidget() : HeaderWidget(),
               ),
               FutureBuilder<DashboardResponse>(
                 initialData: newsService.getCachedUserDashboardData(),

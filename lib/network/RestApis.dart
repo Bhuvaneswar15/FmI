@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart';
-import 'package:mighty_news_firebase/models/WeatherResponse.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/models/WeatherResponse.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import 'NetworkUtils.dart';
@@ -38,8 +38,8 @@ Future<bool> sendPushNotifications(String title, String content, {String? id, St
     headers: header,
   );
 
-  log(res.statusCode);
-  log(res.body);
+  log("network/RestApis.dart/ststtusCode + ($res.statusCode) ");
+  log("network/RestApis.dart/ststtusCode + ($res.body) ");
 
   if (res.statusCode.isSuccessful()) {
     return true;

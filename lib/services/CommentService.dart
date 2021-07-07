@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:mighty_news_firebase/models/CommentData.dart';
+import 'package:FmI/models/CommentData.dart';
 
 import '../main.dart';
 import 'BaseService.dart';

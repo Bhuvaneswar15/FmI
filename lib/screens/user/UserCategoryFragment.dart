@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/components/AppWidgets.dart';
-import 'package:mighty_news_firebase/models/CategoryData.dart';
-import 'package:mighty_news_firebase/screens/user/ViewAllNewsScreen.dart';
-import 'package:mighty_news_firebase/shimmer/TopicShimmer.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/components/AppWidgets.dart';
+import 'package:FmI/models/CategoryData.dart';
+import 'package:FmI/screens/user/ViewAllNewsScreen.dart';
+import 'package:FmI/shimmer/TopicShimmer.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../main.dart';

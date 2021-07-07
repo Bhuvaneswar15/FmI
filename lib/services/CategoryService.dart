@@ -1,4 +1,4 @@
-import 'package:mighty_news_firebase/models/CategoryData.dart';
+import 'package:FmI/models/CategoryData.dart';
 
 import '../main.dart';
 import 'BaseService.dart';

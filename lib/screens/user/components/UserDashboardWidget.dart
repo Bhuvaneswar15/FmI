@@ -4,9 +4,9 @@ import 'dart:convert';
 import 'package:async/async.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mighty_news_firebase/models/DashboardResponse.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/models/DashboardResponse.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../UserNewsListWidget.dart';

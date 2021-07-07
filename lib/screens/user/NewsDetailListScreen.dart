@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
-import 'package:mighty_news_firebase/screens/user/NewsDetailScreen.dart';
+import 'package:FmI/models/NewsData.dart';
+import 'package:FmI/screens/user/NewsDetailScreen.dart';
 
 class NewsDetailListScreen extends StatefulWidget {
   final List<NewsData>? newsData;

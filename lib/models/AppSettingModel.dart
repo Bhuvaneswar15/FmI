@@ -1,4 +1,4 @@
-import 'package:mighty_news_firebase/utils/ModelKeys.dart';
+import 'package:FmI/utils/ModelKeys.dart';
 
 class AppSettingModel {
   bool? disableAd;

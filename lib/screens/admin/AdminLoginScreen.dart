@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mighty_news_firebase/AppLocalizations.dart';
-import 'package:mighty_news_firebase/components/LanguageSelectionWidget.dart';
-import 'package:mighty_news_firebase/screens/admin/AdminDashboardScreen.dart';
-import 'package:mighty_news_firebase/services/AuthService.dart';
-import 'package:mighty_news_firebase/utils/Colors.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/AppLocalizations.dart';
+import 'package:FmI/components/LanguageSelectionWidget.dart';
+import 'package:FmI/screens/admin/AdminDashboardScreen.dart';
+import 'package:FmI/services/AuthService.dart';
+import 'package:FmI/utils/Colors.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../main.dart';
@@ -47,12 +47,14 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
 
       await signInWithEmail(emailController.text, passwordController.text)
           .then((user) {
-             appStore.isAdmin = true;
-          log(appStore.isAdmin);
+        appStore.isAdmin = true;
+        log("compoonents/AdminLoginScreen.dart/signInWithEmail()");
+        log(appStore.isAdmin);
         AdminDashboardScreen().launch(context, isNewTask: true);
         appStore.setLoading(false);
 
         if (user != null) {
+          log("compoonents/AdminLoginScreen.dart/json");
           log(user.toJson());
 
           if (user.isAdmin.validate() || user.isTester.validate()) {

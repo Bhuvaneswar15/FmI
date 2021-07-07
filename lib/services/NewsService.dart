@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:mighty_news_firebase/models/CategoryData.dart';
-import 'package:mighty_news_firebase/models/DashboardResponse.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
-import 'package:mighty_news_firebase/models/UserModel.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
-import 'package:mighty_news_firebase/utils/ModelKeys.dart';
+import 'package:FmI/models/CategoryData.dart';
+import 'package:FmI/models/DashboardResponse.dart';
+import 'package:FmI/models/NewsData.dart';
+import 'package:FmI/models/UserModel.dart';
+import 'package:FmI/utils/Constants.dart';
+import 'package:FmI/utils/ModelKeys.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';
@@ -28,11 +28,6 @@ class NewsService extends BaseService {
 
     setStringAsync(
         DASHBOARD_DATA, jsonEncode(dashboardResponse.toJson(toStore: false)));
-
-    log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-    log(dashboardResponse);
-    log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-
     return dashboardResponse;
   }
 

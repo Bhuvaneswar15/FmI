@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/components/AppWidgets.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
-import 'package:mighty_news_firebase/screens/admin/components/NewsItemListWidget.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/components/AppWidgets.dart';
+import 'package:FmI/models/NewsData.dart';
+import 'package:FmI/screens/admin/components/NewsItemListWidget.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:paginate_firestore/paginate_firestore.dart';
 

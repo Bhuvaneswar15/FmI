@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:mighty_news_firebase/components/AppWidgets.dart';
-import 'package:mighty_news_firebase/main.dart';
-import 'package:mighty_news_firebase/models/UserModel.dart';
-import 'package:mighty_news_firebase/utils/Colors.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/components/AppWidgets.dart';
+import 'package:FmI/main.dart';
+import 'package:FmI/models/UserModel.dart';
+import 'package:FmI/utils/Colors.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class RecentlyLoggedInUserWidget extends StatelessWidget {

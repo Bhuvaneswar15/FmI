@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/AppLocalizations.dart';
-import 'package:mighty_news_firebase/utils/Colors.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/AppLocalizations.dart';
+import 'package:FmI/utils/Colors.dart';
+import 'package:FmI/utils/Constants.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:mobx/mobx.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
@@ -79,7 +79,7 @@ abstract class _AppStore with Store {
     isLoading = val;
 
     if (toastMsg != null) {
-      log(toastMsg);
+      log("store/AppStore.dart/toastMsg "+toastMsg);
       toast(toastMsg);
     }
   }

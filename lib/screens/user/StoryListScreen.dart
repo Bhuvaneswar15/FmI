@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/main.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/main.dart';
+import 'package:FmI/models/NewsData.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:story_view/controller/story_controller.dart';
 import 'package:story_view/widgets/story_view.dart';

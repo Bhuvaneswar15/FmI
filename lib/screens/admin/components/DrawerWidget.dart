@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:mighty_news_firebase/models/ListModel.dart';
-import 'package:mighty_news_firebase/screens/admin/AdminSettingScreen.dart';
-import 'package:mighty_news_firebase/screens/admin/components/AllNewsListWidget.dart';
-import 'package:mighty_news_firebase/utils/Colors.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/models/ListModel.dart';
+import 'package:FmI/screens/admin/AdminSettingScreen.dart';
+import 'package:FmI/screens/admin/components/AllNewsListWidget.dart';
+import 'package:FmI/utils/Colors.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../CategoryListScreen.dart';

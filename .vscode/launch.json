@@ -5,15 +5,9 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "mighty_news_firebase",
+            "name": "FmI",
             "request": "launch",
             "type": "dart"
         },
-        {
-            "name": "mighty_news_firebase (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        }
     ]
 }

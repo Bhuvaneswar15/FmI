@@ -1,4 +1,4 @@
-import 'package:mighty_news_firebase/models/NewsData.dart';
+import 'package:FmI/models/NewsData.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class DashboardResponse {
@@ -28,10 +28,7 @@ class DashboardResponse {
 
   Map<String, dynamic> toJson({bool toStore = true}) {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    log('##########################');
-    log(data);
-    log('##########################');
-
+    
     if (this.breakingNews != null) {
       data['breakingNews'] =
           this.breakingNews!.map((v) => v.toJson(toStore: toStore)).toList();

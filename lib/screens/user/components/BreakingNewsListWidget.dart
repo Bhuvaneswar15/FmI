@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
+import 'package:FmI/models/NewsData.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../NewsDetailListScreen.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
-import 'package:mighty_news_firebase/components/AppWidgets.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/models/NewsData.dart';
+import 'package:FmI/components/AppWidgets.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class BreakingNewsItemWidget extends StatefulWidget {

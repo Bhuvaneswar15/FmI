@@ -1,14 +1,14 @@
 import 'package:async/async.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:mighty_news_firebase/components/HtmlWidget.dart';
-import 'package:mighty_news_firebase/main.dart';
-import 'package:mighty_news_firebase/models/CategoryData.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
-import 'package:mighty_news_firebase/network/RestApis.dart';
-import 'package:mighty_news_firebase/services/FileStorageService.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/components/HtmlWidget.dart';
+import 'package:FmI/main.dart';
+import 'package:FmI/models/CategoryData.dart';
+import 'package:FmI/models/NewsData.dart';
+import 'package:FmI/network/RestApis.dart';
+import 'package:FmI/services/FileStorageService.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../AppLocalizations.dart';

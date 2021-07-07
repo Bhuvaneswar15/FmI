@@ -2,11 +2,15 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:path/path.dart' as path;
 
-Future<String> uploadFile({Uint8List? bytes, dynamic blob, File? file, String prefix = mFirebaseStorageFilePath}) async {
+Future<String> uploadFile(
+    {Uint8List? bytes,
+    dynamic blob,
+    File? file,
+    String prefix = mFirebaseStorageFilePath}) async {
   if (Uint8List == null && blob == null && file == null) {
     throw errorSomethingWentWrong;
   }
@@ -19,9 +23,12 @@ Future<String> uploadFile({Uint8List? bytes, dynamic blob, File? file, String pr
     fileName = '${path.basename(file.path)}';
   }
 
-  Reference storageReference = FirebaseStorage.instance.ref(mFirebaseStorageFilePath).child('$fileName.png');
+  Reference storageReference = FirebaseStorage.instance
+      .ref(mFirebaseStorageFilePath)
+      .child('$fileName.png');
 
-  log(storageReference.fullPath);
+  log("services/FileStorageService.dart/storageReference()" +
+      storageReference.fullPath);
 
   UploadTask? uploadTask;
 
@@ -30,20 +37,21 @@ Future<String> uploadFile({Uint8List? bytes, dynamic blob, File? file, String pr
   } else if (blob != null) {
     uploadTask = storageReference.putBlob(blob);
   } else if (bytes != null) {
-    uploadTask = storageReference.putData(bytes, SettableMetadata(contentType: 'image/png'));
+    uploadTask = storageReference.putData(
+        bytes, SettableMetadata(contentType: 'image/png'));
   }
 
   if (uploadTask == null) throw errorSomethingWentWrong;
 
-  log('File Uploading');
+  log("services/FileStorageService.dart" + 'File Uploading');
 
   return await uploadTask.then((v) async {
-    log('File Uploaded');
+    log("services/FileStorageService.dart" + 'File Uploaded');
 
     if (v.state == TaskState.success) {
       String url = await storageReference.getDownloadURL();
 
-      log(url);
+      log("services/FileStorageService.dart/url" + url);
 
       return url;
     } else {
@@ -55,10 +63,15 @@ Future<String> uploadFile({Uint8List? bytes, dynamic blob, File? file, String pr
 }
 
 Future<void> deleteFile(String url) async {
-  String path = url.replaceAll(RegExp(r'https://firebasestorage.googleapis.com/v0/b/mighty-news-firebase.appspot.com/o/default_images%2F'), '').split('?')[0];
+  String path = url
+      .replaceAll(
+          RegExp(
+              r'https://firebasestorage.googleapis.com/v0/b/mighty-news-firebase.appspot.com/o/default_images%2F'),
+          '')
+      .split('?')[0];
 
   await FirebaseStorage.instance.ref().child(path).delete().then((value) {
-    log('File deleted: $url');
+    log("services/FileStorageService.dart/deleteFile()" + 'File deleted: $url');
   }).catchError((e) {
     throw e;
   });
@@ -68,6 +81,7 @@ Future<List<String>> listOfFileFromFirebaseStorage({String? path}) async {
   List<String> list = [];
 
   var ref = FirebaseStorage.instance.ref('$mFirebaseStorageFilePath');
+  log("services/FileStorageService.dart/storageReference()");
   log(ref);
 
   var listResult = await ref.listAll();

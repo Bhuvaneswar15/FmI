@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/AppLocalizations.dart';
-import 'package:mighty_news_firebase/main.dart';
-import 'package:mighty_news_firebase/network/RestApis.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/AppLocalizations.dart';
+import 'package:FmI/main.dart';
+import 'package:FmI/network/RestApis.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import 'PickImageDialog.dart';

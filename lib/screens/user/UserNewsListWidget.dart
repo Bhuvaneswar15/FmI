@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
+import 'package:FmI/models/NewsData.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import 'NewsDetailListScreen.dart';
@@ -14,7 +14,7 @@ class UserNewsListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: EdgeInsets.all(8),
+      padding: EdgeInsets.all(6),
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (_, index) {
         return UserNewsItemWidget(

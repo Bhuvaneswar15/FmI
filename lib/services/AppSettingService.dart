@@ -1,5 +1,5 @@
-import 'package:mighty_news_firebase/models/AppSettingModel.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/models/AppSettingModel.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';
@@ -51,7 +51,7 @@ class AppSettingService extends BaseService {
         await addDocument(appSettingModel.toJson()).then((value) {
           id = value.id;
         }).catchError((e) {
-          log(e);
+          log("services/AppSettingService.dart/setAppSetting() "+e);
         });
       }
 

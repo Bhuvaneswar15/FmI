@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mighty_news_firebase/components/AppWidgets.dart';
-import 'package:mighty_news_firebase/models/NewsData.dart';
-import 'package:mighty_news_firebase/screens/user/NewsDetailScreen.dart';
-import 'package:mighty_news_firebase/utils/Colors.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
-import 'package:mighty_news_firebase/utils/ModelKeys.dart';
+import 'package:FmI/components/AppWidgets.dart';
+import 'package:FmI/models/NewsData.dart';
+import 'package:FmI/screens/user/NewsDetailScreen.dart';
+import 'package:FmI/utils/Colors.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
+import 'package:FmI/utils/ModelKeys.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../main.dart';

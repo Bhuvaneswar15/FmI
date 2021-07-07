@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:mighty_news_firebase/utils/ModelKeys.dart';
+import 'package:FmI/utils/ModelKeys.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 abstract class BaseService {
@@ -11,11 +11,11 @@ abstract class BaseService {
     return await ref!.add(data).then((value) {
       value.update({CommonKeys.id: value.id});
 
-      log('Added: $data');
+      log("services/BaseService.dart/addDocument()"+'Added: $data');
 
       return value;
     }).catchError((e) {
-      log(e);
+      log("services/BaseService.dart/addDocument()"+e);
       throw e;
     });
   }
@@ -24,29 +24,29 @@ abstract class BaseService {
     var doc = ref!.doc(id);
 
     return await doc.set(data).then((value) {
-      log('Added: $data');
+      log("services/BaseService.dart/addDocumentWithCustomId()"+'Added: $data');
 
       return doc;
     }).catchError((e) {
-      log(e);
+      log("services/BaseService.dart/addDocumentWithCustomeId()"+e);
       throw e;
     });
   }
 
   Future<void> updateDocument(Map<String, dynamic> data, String? id) async {
     await ref!.doc(id).update(data).then((value) {
-      log('Updated: $data');
+      log("services/BaseService.dart/updateDocument()"+'Updated: $data');
     }).catchError((e) {
-      log(e);
+      log("services/BaseService.dart/updateDocument()"+e);
       throw e;
     });
   }
 
   Future<void> removeDocument(String? id) async {
     await ref!.doc(id).delete().then((value) {
-      log('Removed: $id');
+      log("services/BaseService.dart/removeDocument()"+'Removed: $id');
     }).catchError((e) {
-      log(e);
+      log("services/BaseService.dart/removeDocument()"+e);
       throw e;
     });
   }

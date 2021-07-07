@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
+import 'package:FmI/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:shimmer/shimmer.dart';
 

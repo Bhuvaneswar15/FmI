@@ -1,10 +1,10 @@
 import 'package:clippy_flutter/arc.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_news_firebase/models/WalkThroughModel.dart';
-import 'package:mighty_news_firebase/screens/user/UserDashboardScreen.dart';
-import 'package:mighty_news_firebase/utils/Colors.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
+import 'package:FmI/models/WalkThroughModel.dart';
+import 'package:FmI/screens/user/UserDashboardScreen.dart';
+import 'package:FmI/utils/Colors.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class WalkThroughScreen extends StatefulWidget {

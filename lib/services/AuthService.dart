@@ -4,10 +4,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:mighty_news_firebase/models/UserModel.dart';
-import 'package:mighty_news_firebase/utils/Common.dart';
-import 'package:mighty_news_firebase/utils/Constants.dart';
-import 'package:mighty_news_firebase/utils/ModelKeys.dart';
+import 'package:FmI/models/UserModel.dart';
+import 'package:FmI/utils/Common.dart';
+import 'package:FmI/utils/Constants.dart';
+import 'package:FmI/utils/ModelKeys.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:the_apple_sign_in/the_apple_sign_in.dart';
 
@@ -48,13 +48,10 @@ Future<void> signInWithGoogle() async {
 }
 
 Future<UserModel> signInWithEmail(String email, String password) async {
-  log("AuthServices");
 
   if (await userService.isUserExist(email, LoginTypeApp)) {
     UserCredential userCredential =
         await auth.signInWithEmailAndPassword(email: email, password: password);
-
-    log(userCredential);
 
     if (userCredential != null && userCredential.user != null) {
       UserModel userModel = UserModel();
@@ -62,7 +59,7 @@ Future<UserModel> signInWithEmail(String email, String password) async {
       User user = userCredential.user!;
 
       return await userService.userByEmail(user.email).then((value) async {
-        log('Signed in');
+        log("services/AuthService.dart/userByEmail() "+'Signed in');
 
         userModel = value;
 
@@ -83,38 +80,6 @@ Future<UserModel> signInWithEmail(String email, String password) async {
   } else {
     throw 'You are not registered with us';
   }
-
-  /// remove if loop below and try Admin
-  // if (await userService.isUserExist(email, LoginTypeApp)) {
-  //   UserCredential userCredential = await auth.signInWithEmailAndPassword(email: email, password: password);
-
-  //   if (userCredential != null && userCredential.user != null) {
-  //     UserModel userModel = UserModel();
-
-  //     User user = userCredential.user!;
-
-  //     return await userService.userByEmail(user.email).then((value) async {
-  //       log('Signed in');
-
-  //       userModel = value;
-
-  //       await setValue(PASSWORD, password);
-  //       await setValue(LOGIN_TYPE, LoginTypeApp);
-  //       //
-  //       await updateUserData(userModel);
-  //       //
-  //       await setUserDetailPreference(userModel);
-
-  //       return userModel;
-  //     }).catchError((e) {
-  //       throw e;
-  //     });
-  //   } else {
-  //     throw errorSomethingWentWrong;
-  //   }
-  // } else {
-  //   throw 'You are not registered with us';
-  // }
 }
 
 Future<void> signUpWithEmail(String name, String email, String password) async {
@@ -146,7 +111,7 @@ Future<void> signUpWithEmail(String name, String email, String password) async {
     await userService
         .addDocumentWithCustomId(currentUser.uid, userModel.toJson())
         .then((value) async {
-      log('Signed up');
+      log("services/AuthService.dart/userByEmail()"+'Signed up');
       await signInWithEmail(email, password).then((value) {
         //
       });
