@@ -1,7 +1,7 @@
 import 'package:nb_utils/nb_utils.dart';
 
-const mAppName = 'News';
-const mWebName = 'Mighty News - Admin Panel';
+const mAppName = 'FmI';
+const mWebName = 'FmI - Admin Panel';
 
 String get appName => isMobile ? mAppName : mWebName;
 
