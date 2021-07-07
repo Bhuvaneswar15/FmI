@@ -1,4 +1,4 @@
-# mighty_news_firebase
+# FmI
 
 A new Flutter application.
 
