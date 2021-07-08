@@ -18,7 +18,7 @@ class UserNewsItemWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          cachedImage(newsData!.image.validate(), fit: BoxFit.cover, height: 100, width: 140).cornerRadiusWithClipRRect(defaultRadius),
+          cachedImage(newsData!.image.validate(), fit: BoxFit.cover, height: 95, width: 130).cornerRadiusWithClipRRect(defaultRadius),
           8.width,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,14 +33,14 @@ class UserNewsItemWidget extends StatelessWidget {
               Row(
                 children: [
                   Icon(Icons.access_time_rounded, size: 18, color: textSecondaryColor),
-                  4.width,
-                  if (newsData!.updatedAt != null) Text(newsData!.updatedAt!.timeAgo, maxLines: 1, style: secondaryTextStyle(size: 12)),
-                  4.width,
+                  2.width,
+                  if (newsData!.updatedAt != null) Text(newsData!.updatedAt!.timeAgo, maxLines: 1, style: secondaryTextStyle(size: 11)),
+                  2.width,
                   Text('・', style: secondaryTextStyle()),
-                  4.width,
+                  2.width,
                   Text(
                     '${(parseHtmlString(newsData!.content).calculateReadTime()).ceilToDouble().toInt()} ${'min_read'.translate}',
-                    style: secondaryTextStyle(size: 12),
+                    style: secondaryTextStyle(size: 11),
                   ),
                 ],
               ),

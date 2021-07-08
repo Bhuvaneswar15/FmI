@@ -45,7 +45,7 @@ class _UploadNewsScreenState extends State<UploadNewsScreen> {
 
   CategoryData? selectedCategory;
 
-  bool? sendNotification = true;
+  bool? sendNotification = false;
   bool? allowComments = true;
 
   @override

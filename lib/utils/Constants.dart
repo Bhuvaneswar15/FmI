@@ -5,7 +5,7 @@ const mWebName = 'FmI - Admin Panel';
 
 String get appName => isMobile ? mAppName : mWebName;
 
-const mNewsSource = 'MeetMighty';
+const mNewsSource = 'NOE';
 const mAboutApp = '$mAppName app is a smart Flutter news app. It contains Flutter source code and to build your news application with most useful'
     ' features and eye-catching outlook. If you are planning to deploy your news app project for android and ios users, then it’s your'
     ' perfect match to have on your hand.';
@@ -32,7 +32,6 @@ const codeCanyonURL = 'https://codecanyon.net/item/mightynews-flutter-news-app-w
 const mWeatherBaseUrl = 'https://api.weatherapi.com/v1/current.json';
 
 /// Obtain your key from https://api.weatherapi.com
-// const mWeatherAPIKey = 'a39cff07b02f4ab0ad2174418210307';
 const mWeatherAPIKey = 'df5a6783246c4cf9abb31636210507';
 
 //endregion
@@ -96,7 +95,7 @@ const USER_EMAIL = 'USER_EMAIL';
 const USER_ROLE = 'USER_ROLE';
 const PASSWORD = 'PASSWORD';
 const PROFILE_IMAGE = 'PROFILE_IMAGE';
-// const THEME_MODE_INDEX = "THEME_MODE_INDEX";
+const THEME_MODE_INDEX = "THEME_MODE_INDEX";
 const IS_NOTIFICATION_ON = "IS_NOTIFICATION_ON";
 const IS_REMEMBERED = "IS_REMEMBERED";
 const LANGUAGE = 'LANGUAGE';

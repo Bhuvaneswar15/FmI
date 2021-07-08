@@ -66,7 +66,7 @@ class _ViewAllNewsScreenState extends State<ViewAllNewsScreen> {
             );
           },
           shrinkWrap: true,
-          padding: EdgeInsets.all(8),
+          padding: EdgeInsets.all(6),
           // orderBy is compulsory to enable pagination
           query: widget.filterBy == FilterByPost ? newsService.buildCommonQuery(newsType: widget.newsType) : newsService.buildNewsByCategoryQuery(widget.categoryRef),
           itemsPerPage: DocLimit,

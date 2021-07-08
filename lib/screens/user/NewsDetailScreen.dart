@@ -310,9 +310,10 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                             ).paddingSymmetric(horizontal: 16),
                           ],
                         ).paddingOnly(top: 8, left: 8, right: 8, bottom: 30),
-                        16.height,
-                        if (myBanner != null) Container(child: AdWidget(ad: myBanner!), height: myBanner!.size.height.toDouble()),
-                        16.height,
+                           /// UnComment below code to add adds
+                        // 16.height,
+                        // if (myBanner != null) Container(child: AdWidget(ad: myBanner!), height: myBanner!.size.height.toDouble()),
+                        // 16.height,
                         FutureBuilder<List<NewsData>>(
                           future: newsService.relatedNewsFuture(widget.data!.categoryRef, widget.data!.id),
                           builder: (_, snap) {
