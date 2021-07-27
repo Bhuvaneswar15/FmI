@@ -21,11 +21,11 @@ class ViewAllHeadingWidget extends StatelessWidget {
           padding: EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
           margin: EdgeInsets.only(left: 16),
           decoration: BoxDecoration(
-            color: backgroundColor ?? colorPrimary.withOpacity(0.2),
+            color: backgroundColor ?? colorPrimary.withOpacity(1),
             borderRadius: radius(defaultRadius),
             border: Border.all(color: colorPrimary),
           ),
-          child: Text(title.validate(), style: boldTextStyle(size: 12, color: textColor ?? colorPrimary, letterSpacing: 1.5)),
+          child: Text(title.validate(), style: boldTextStyle(size: 12, color: textColor ?? white, letterSpacing: 1.5)),
         ),
         Container(
           margin: EdgeInsets.only(right: 8),

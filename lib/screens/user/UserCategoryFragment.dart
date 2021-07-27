@@ -33,21 +33,21 @@ class UserCategoryFragment extends StatelessWidget {
                   Wrap(
                     alignment: WrapAlignment.start,
                     crossAxisAlignment: WrapCrossAlignment.start,
-                    runSpacing: 12,
-                    spacing: 12,
+                    runSpacing: MediaQuery.of(context).size.height * 0.017,
+                    spacing: MediaQuery.of(context).size.width * 0.037,
                     children: snap.data!.map((e) {
                       return Container(
                         // padding: EdgeInsets.all(8),
                         alignment: Alignment.center,
-                        width: 150,
+                        width:MediaQuery.of(context).size.width * 0.437 ,
                         decoration: BoxDecoration(),
                         child: Stack(
                           children: [
-                            cachedImage(e.image, height: 100, width: 150, fit: BoxFit.cover).cornerRadiusWithClipRRect(defaultRadius),
-                            8.height,
+                            cachedImage(e.image, height: 100, width: double.infinity, fit: BoxFit.cover).cornerRadiusWithClipRRect(defaultRadius),
+                            6.height,
                             Positioned(
-                              bottom: 8,
-                              left: 8,
+                              bottom: 6,
+                              left: 6,
                               child: Text(
                                 e.name!,
                                 style: boldTextStyle(color: Colors.white, size: 12, backgroundColor: Colors.black38),

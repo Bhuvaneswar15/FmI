@@ -26,7 +26,8 @@ class UserDashboardWidget extends StatefulWidget {
   UserDashboardWidgetState createState() => UserDashboardWidgetState();
 }
 
-class UserDashboardWidgetState extends State<UserDashboardWidget> with SingleTickerProviderStateMixin {
+class UserDashboardWidgetState extends State<UserDashboardWidget>
+    with SingleTickerProviderStateMixin {
   String mBreakingNewsMarquee = '';
 
   AsyncMemoizer asyncMemoizer = AsyncMemoizer<List<String>>();
@@ -60,7 +61,8 @@ class UserDashboardWidgetState extends State<UserDashboardWidget> with SingleTic
       json.addAll(widgets.map((e) => e));
     }
     if (json.isEmpty) {
-      String defaultOrder = await rootBundle.loadString('assets/dashboard.json');
+      String defaultOrder =
+          await rootBundle.loadString('assets/dashboard.json');
       Iterable it = jsonDecode(defaultOrder);
 
       json.clear();
@@ -93,7 +95,10 @@ class UserDashboardWidgetState extends State<UserDashboardWidget> with SingleTic
           ViewAllHeadingWidget(
             title: 'breaking_News'.translate.toUpperCase(),
             onTap: () {
-              ViewAllNewsScreen(title: 'breaking_News'.translate, newsType: NewsTypeBreaking).launch(context);
+              ViewAllNewsScreen(
+                      title: 'breaking_News'.translate,
+                      newsType: NewsTypeBreaking)
+                  .launch(context);
             },
           ),
           8.height,
@@ -111,7 +116,9 @@ class UserDashboardWidgetState extends State<UserDashboardWidget> with SingleTic
           ViewAllHeadingWidget(
             title: 'recent_News'.translate.toUpperCase(),
             onTap: () {
-              ViewAllNewsScreen(title: 'recent_News'.translate, newsType: NewsTypeRecent).launch(context);
+              ViewAllNewsScreen(
+                      title: 'recent_News'.translate, newsType: NewsTypeRecent)
+                  .launch(context);
             },
           ),
           8.height,
@@ -123,19 +130,19 @@ class UserDashboardWidgetState extends State<UserDashboardWidget> with SingleTic
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: json.map((e) {
-        if (e == DashboardWidgetsBreakingNewsMarquee) {
-          return BreakingNewsMarqueeWidget(string: mBreakingNewsMarquee);
-        } else if (e == DashboardWidgetsStory) {
+        if (e == DashboardWidgetsStory) {
           return StoryListWidget(list: widget.snap.data!.story);
         } else if (e == DashboardWidgetsBreakingNews) {
           return breakingNewsWidget();
-        } else if (e == DashboardWidgetsQuickRead) {
-          return QuickReadWidget(widget.snap.data!.recentNews.validate()..addAll(widget.snap.data!.breakingNews!));
+        // } else if (e == DashboardWidgetsQuickRead) {
+        //   return QuickReadWidget(widget.snap.data!.recentNews.validate()
+        //     ..addAll(widget.snap.data!.breakingNews!));
         } else if (e == DashboardWidgetsRecentNews) {
           return recentNewsWidget();
         } else {
           return SizedBox();
         }
+        
       }).toList(),
     );
   }

@@ -77,18 +77,18 @@ String storeBaseURL() {
 
 void setDynamicStatusBarColor({int delay = 200}) {
   if (appStore.isDarkMode) {
-    //setStatusBarColor(scaffoldSecondaryDark, delayInMilliSeconds: delay);
+    setStatusBarColor(scaffoldSecondaryDark, delayInMilliSeconds: delay);
   } else {
-    //setStatusBarColor(Colors.white, delayInMilliSeconds: delay);
+    setStatusBarColor(colorPrimary , delayInMilliSeconds: delay);
   }
 }
 
 Color getAppBarWidgetBackGroundColor() {
-  return appStore.isDarkMode ? scaffoldSecondaryDark : Colors.white;
+  return appStore.isDarkMode ? scaffoldSecondaryDark : colorPrimary;
 }
 
 Color getAppBarWidgetTextColor() {
-  return appStore.isDarkMode ? white : black;
+  return appStore.isDarkMode ? white : white;
 }
 
 void setTheme() {

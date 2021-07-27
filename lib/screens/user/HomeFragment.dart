@@ -1,3 +1,4 @@
+import 'package:FmI/utils/Common.dart';
 import 'package:flutter/material.dart';
 import 'package:FmI/models/DashboardResponse.dart';
 import 'package:FmI/shimmer/HorizontalImageShimmer.dart';
@@ -25,7 +26,7 @@ class _HomeFragmentState extends State<HomeFragment> {
   }
 
   Future<void> init() async {
-    //
+    setDynamicStatusBarColor();
   }
 
   @override
@@ -50,8 +51,8 @@ class _HomeFragmentState extends State<HomeFragment> {
           child: Column(
             children: [
               Container(
-                height: !getBoolAsync(DISABLE_LOCATION_WIDGET) ? 100 : 70,
-                child: !getBoolAsync(DISABLE_LOCATION_WIDGET)? WeatherWidget() : HeaderWidget(),
+                height: getBoolAsync(DISABLE_LOCATION_WIDGET) ? 100 : 70,
+                child: getBoolAsync(DISABLE_LOCATION_WIDGET)? WeatherWidget() : HeaderWidget(),
               ),
               FutureBuilder<DashboardResponse>(
                 initialData: newsService.getCachedUserDashboardData(),

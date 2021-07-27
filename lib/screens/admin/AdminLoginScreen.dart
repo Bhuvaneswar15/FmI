@@ -21,9 +21,9 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   TextEditingController emailController =
-      TextEditingController(text: 'admin@gmail.com');
+      TextEditingController(text: '');
   TextEditingController passwordController =
-      TextEditingController(text: 'Admin@1');
+      TextEditingController(text: '');
 
   FocusNode passFocus = FocusNode();
   FocusNode emailFocus = FocusNode();
